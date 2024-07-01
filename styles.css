@@ -1,3 +1,24 @@
+@font-face {
+  font-family: "Montserrat"; /* Name to reference the font */
+  src: url("Fonts/Montserrat-Bold.otf") format("opentype");
+  font-weight: bold; /* Adjust as needed */
+  font-style: normal; /* Adjust as needed */
+}
+
+@font-face {
+  font-family: "Montserrat Alternates"; /* Name to reference the font */
+  src: url("Fonts/MontserratAlternates-Bold.otf") format("opentype");
+  font-weight: bold; /* Adjust as needed */
+  font-style: normal; /* Adjust as needed */
+}
+
+@font-face {
+  font-family: "Montserrat Alternates"; /* Name to reference the font */
+  src: url("Fonts/MontserratAlternates-Bold.otf") format("opentype");
+  font-weight: normal; /* Adjust as needed */
+  font-style: normal; /* Adjust as needed */
+}
+
 body,
 html {
   margin: 0;
@@ -7,32 +28,26 @@ html {
 
 .navbar,
 footer {
-  padding: 0;
+  padding: 1%;
   margin: 0;
-  background-color: #333;
-  color: #e2b69c;
+  background-color: #5b5e63;
+  color: #58c272;
 }
 
 .navbar-brand {
-  display: flex; /* Sets the layout to Flexbox */
-  align-items: bottom; /* Centers items vertically */
-  gap: 0.1em; /* Optional: adds space between the icon and the text */
-  text-decoration: none;
-  color: #e2b69c;
+  padding: 0;
+  margin: 0;
 }
 
-.navbar-brand:hover {
-  color: #e2b69c;
-}
-
-.navbar-brand i {
-  font-size: 1.2em; /* Adjust the icon size as needed */
+.navbar-brand img {
+  width: 12vw;
+  height: auto;
 }
 
 #dropdownMenuButton {
   border: none;
   background: none; /* Transparent background */
-  color: #e2b69c;
+  color: #58c272;
 }
 
 .navbar-nav {
@@ -40,11 +55,13 @@ footer {
 }
 
 .nav-link {
-  color: #e2b69c;
-  font-size: 1.2rem;
-  font-family: monospace;
+  color: #58c272;
+  font-size: 1.3rem;
+  font-family: "Montserrat";
   font-weight: bold;
-  font-style: italic;
+}
+.nav-link:hover {
+  color: #711a00;
 }
 
 section {
@@ -58,47 +75,56 @@ h1 {
   color: #333;
 }
 
-section {
-  background: rgb(75, 52, 39);
-  background: radial-gradient(
-    circle,
-    rgba(75, 52, 39, 1) 0%,
-    rgba(215, 192, 174, 1) 80%,
-    rgba(192, 160, 98, 1) 100%
-  );
-}
-
 .home-section {
-  position: relative;
-  overflow: hidden;
+  min-height: 100vh; /* Ensures the section covers at least the height of the viewport */
+  background-image: url("./Assets/Background-Image.png"); /* URL of your background image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent repeating the background image */
+  z-index: -1;
 }
 
-.home-section img {
-  height: 90vh;
-  object-fit: cover;
-  width: 100%;
+.home-text img {
+  width: 80%;
 }
 
-.home-section .home-text {
-  position: absolute;
-  font-family: sans-serif;
-  margin: 2vh;
+.CTA-Button {
+  background-color: #711a00;
   color: white;
+  font-size: larger;
+}
+
+.CTA-Button:hover {
+  background-color: #711a00;
+  color: white;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }
 
 .home-text h2 {
   font-weight: bold;
+  color: #096d34;
+}
+
+#about {
+  min-height: 100vh; /* Ensures the section covers at least the height of the viewport */
+  background-image: url("./Assets/Background-Image.png"); /* URL of your background image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent repeating the background image */
+  color: #5b5e63;
+  z-index: -1;
 }
 
 #about h2 {
-  font-weight: bold; /* Ensures the header stands out */
-  margin-bottom: 0.5em; /* Adds space between the header and paragraph */
+  color: #096d34;
+  font-family: "Montserrat";
+  font-weight: bold;
 }
 
-#about h2 p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #333; /* Dark grey for readability */
+#about p {
+  font-family: "Montserrat Alternates";
+  font-weight: normal;
 }
 
 .about-image {
@@ -106,28 +132,186 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
 }
 
-#demo {
-  max-height: 90vh;
-}
-
-#demo .carousel-item img {
-  height: 90vh;
-  object-fit: cover;
-  width: 100%;
-}
-
-.carousel-caption {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Semi-transparent background for better visibility */
-  color: white; /* Ensures text is bright and visible */
-  padding: 10px; /* Adds space around the text */
-  border-radius: 5px; /* Softens the edges of the caption background */
-}
-
 .card {
   background-color: rgba(252, 249, 249, 0.5);
+}
+
+#services {
+  min-height: 100vh; /* Ensures the section covers at least the height of the viewport */
+  background-image: url("./Assets/Background-Image.png"); /* URL of your background image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent repeating the background image */
+  color: #5b5e63;
+  z-index: -1;
+}
+.services {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.services h2 {
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  color: #096d34;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #fffffa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: left;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.service-card img {
+  width: 100%;
+  height: auto;
+}
+
+.service-card h3 {
+  margin: 15px;
+  font-size: 1.5em;
+  color: #096d34;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+.service-card p {
+  margin: 15px;
+  font-size: 1em;
+  font-family: "Montserrat Alternates";
+  font-weight: normal;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Staggered Fade-in for Service Cards */
+.service-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.service-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.service-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.service-card:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.contact-us {
+  text-align: center;
+  padding: 50px 20px;
+  min-height: 100vh; /* Ensures the section covers at least the height of the viewport */
+  background-image: url("./Assets/Background-Image.png"); /* URL of your background image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent repeating the background image */
+  color: #5b5e63;
+  z-index: -1;
+}
+
+.contact-us h2 {
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  color: #388e3c;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details {
+  margin-top: 30px;
+}
+
+.contact-details p {
+  font-size: 1em;
+  color: #333;
+}
+
+.footer {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer a {
+  color: #58c272;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: #711a00;
+}
+
+.footer .social-icons a {
+  margin: 0 10px;
+}
+
+/*Animations*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+}
+
+.fade-in-visible {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 1s ease-in-out;
+}
+
+@media (max-width: 992px) {
+  .navbar-brand img {
+    width: 170px;
+    height: auto;
+  }
+
+  .home-text img {
+    width: 100%;
+  }
 }

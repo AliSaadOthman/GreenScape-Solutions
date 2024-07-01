@@ -16,4 +16,30 @@ $(document).ready(function () {
       $(".navbar-toggler").click();
     }
   });
+
+  // Function to check if element is in view
+  function isInView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+    var elemTop = $(elem).offset().top;
+    return elemTop <= docViewBottom;
+  }
+
+  // Check each element with class .fade-in
+  $(".fade-in").each(function () {
+    var $elem = $(this);
+    if (isInView($elem)) {
+      $elem.addClass("fade-in-visible");
+    }
+  });
+
+  // Fade-in elements on scroll
+  $(window).scroll(function () {
+    $(".fade-in").each(function () {
+      var $elem = $(this);
+      if (isInView($elem)) {
+        $elem.addClass("fade-in-visible");
+      }
+    });
+  });
 });

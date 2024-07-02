@@ -31,7 +31,7 @@ footer {
   padding: 1%;
   margin: 0;
   background-color: #5b5e63;
-  color: #58c272;
+  color: white;
 }
 
 .navbar-brand {
@@ -47,7 +47,7 @@ footer {
 #dropdownMenuButton {
   border: none;
   background: none; /* Transparent background */
-  color: #58c272;
+  color: white;
 }
 
 .navbar-nav {
@@ -55,7 +55,7 @@ footer {
 }
 
 .nav-link {
-  color: #58c272;
+  color: white;
   font-size: 1.3rem;
   font-family: "Montserrat";
   font-weight: bold;
@@ -85,7 +85,7 @@ h1 {
 }
 
 .home-text img {
-  width: 80%;
+  width: 50%;
 }
 
 .CTA-Button {
@@ -259,7 +259,7 @@ h1 {
 }
 
 .footer a {
-  color: #58c272;
+  color: white;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -313,5 +313,9 @@ h1 {
 
   .home-text img {
     width: 100%;
+  }
+
+  .home-text h2 {
+    font-size: 20px;
   }
 }

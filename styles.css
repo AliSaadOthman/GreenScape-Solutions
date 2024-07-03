@@ -76,12 +76,26 @@ h1 {
 }
 
 .home-section {
+  position: relative;
   min-height: 100vh; /* Ensures the section covers at least the height of the viewport */
-  background-image: url("./Assets/Background-Image.png"); /* URL of your background image */
-  background-size: cover; /* Cover the entire container */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent repeating the background image */
+  overflow: hidden; /* Ensures the video does not overflow the container */
+  z-index: 1; /* Ensure content within this section is above the video */
+}
+
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
   z-index: -1;
+  transform: translate(-50%, -50%); /* Center the video */
+  background-size: cover; /* Ensure the video covers the entire container */
+  background-position: center; /* Center the video */
+  background-repeat: no-repeat; /* Prevent repeating the background */
+  object-fit: cover; /* Ensure the video covers the entire container */
 }
 
 .home-text img {
